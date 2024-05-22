@@ -42,68 +42,79 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSelectProduct"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:progressTint="@color/rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:numStars="5"
+                android:rating="3"/>
 
-    <TextView
-        android:id="@+id/txtColors"
-        android:layout_below="@id/divider2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Colors:"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toStartOf="@+id/txtColorTypes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgSelectProduct" />
+            <TextView
+                android:id="@+id/txtColors"
+                android:layout_below="@id/divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Colors:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintEnd_toStartOf="@+id/txtColorTypes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgSelectProduct" />
 
-    <TextView
-        android:id="@+id/txtColorTypes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/txtColors"
-        android:layout_below="@id/divider2"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintStart_toEndOf="@+id/txtColors"
-        app:layout_constraintTop_toBottomOf="@+id/imgSelectProduct" />
+            <TextView
+                android:id="@+id/txtColorTypes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/txtColors"
+                android:layout_below="@id/divider2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintStart_toEndOf="@+id/txtColors"
+                app:layout_constraintTop_toBottomOf="@+id/imgSelectProduct" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/txtColors"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtColorTypes" />
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/txtColors"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtColorTypes" />
 
-    <TextView
-        android:id="@+id/txtMrp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/divider"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Price"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/divider4"
-        app:layout_constraintEnd_toStartOf="@+id/txtDisMrp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+            <TextView
+                android:id="@+id/txtMrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Price"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/divider4"
+                app:layout_constraintEnd_toStartOf="@+id/txtDisMrp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
 
             <TextView
                 android:id="@+id/txtDisMrp"
@@ -130,12 +141,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtDisMrp" />
-
             <View
                 android:id="@+id/divider2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/txtSelectProduct"
+                android:layout_below="@id/ratingBar"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="?android:attr/listDivider"
@@ -143,7 +153,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgSelectProduct" />
-
             <TextView
                 android:id="@+id/txtDesTitle"
                 android:layout_width="wrap_content"
@@ -157,22 +166,19 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider4" />
-
             <TextView
                 android:id="@+id/txtDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtDesTitle"
-
-                android:padding="20dp"
                 android:layout_marginBottom="80dp"
-                android:text="fuiebeduiieuieubeeiifekfjefjebiefnieifniefneinfeiknfoeifneieofnlefnleoikfnel"
+                android:padding="20dp"
+                android:text="Description Paragraph"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDesTitle"/>
-
+                app:layout_constraintTop_toBottomOf="@+id/txtDesTitle" />
         </RelativeLayout>
     </ScrollView>
 
@@ -184,12 +190,13 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/btnAddToCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/splashBg"
             android:padding="10dp"
             android:text="Add to cart"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

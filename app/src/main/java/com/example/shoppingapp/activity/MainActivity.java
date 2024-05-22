@@ -3,6 +3,7 @@ package com.example.shoppingapp.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RatingBar;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     List<ProductModel> list = new ArrayList<>();
     List<ProductModel> filterList = new ArrayList<>();
     List<CarouselItem> carouselItems = new ArrayList<>();
+    public static List<ProductModel> listCart = new ArrayList<>();
+
     ShoppingInterface shoppingInterface;
 
     String samsung = "Size (Main_Display)\n" +
@@ -245,6 +248,8 @@ public class MainActivity extends AppCompatActivity {
     String boatAirdopesColor = "Assassin Red, Black, Black Sabre, Celestial Blue, Cool Sapphire, Electric Blue";
     String jblColor = "Black, Beige, Mint, White";
 
+    RatingBar ratingBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -291,6 +296,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("price",list.get(position).modelPrice);
                 intent.putExtra("description",list.get(position).modelDescription);
                 intent.putExtra("product Color",list.get(position).modelColor);
+                //intent.putExtra("rating",list.get(position).)
                 startActivity(intent);
             }
         };
@@ -306,8 +312,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
-                filterList = list.stream().filter(a->a.modelNames.toLowerCase().contains(newText.toLowerCase())).collect(Collectors.toList());
+                filterList=list.stream().filter(a->a.modelNames.toLowerCase().contains(newText.toLowerCase())).collect(Collectors.toList());
                 adapter.search(filterList);
                 return false;
             }

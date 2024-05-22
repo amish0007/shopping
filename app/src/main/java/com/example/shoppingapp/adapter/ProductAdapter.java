@@ -1,5 +1,6 @@
 package com.example.shoppingapp.adapter;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shoppingapp.R;
+import com.example.shoppingapp.activity.MainActivity;
+import com.example.shoppingapp.activity.ShoppingDetailsActivity;
 import com.example.shoppingapp.databinding.ProductItemsBinding;
 import com.example.shoppingapp.interfaces.ShoppingInterface;
 import com.example.shoppingapp.model.ProductModel;
@@ -52,7 +55,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.productItemsBinding.clItems.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                shoppingInterface.onClick(position);
+               // shoppingInterface.onClick(position);
+                Intent intent = new Intent(holder.itemView.getContext(), ShoppingDetailsActivity.class);
+                intent.putExtra("image",l1.get(position).modelImage);
+                intent.putExtra("product Name",l1.get(position).modelNames);
+                intent.putExtra("originalPrice",l1.get(position).modelOriginal);
+                intent.putExtra("price",l1.get(position).modelPrice);
+                intent.putExtra("description",l1.get(position).modelDescription);
+                intent.putExtra("product Color",l1.get(position).modelColor);
+                holder.itemView.getContext().startActivity(intent);
             }
         });
     }
@@ -71,5 +82,4 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             productItemsBinding = ProductItemsBinding.bind(itemView);
         }
     }
-
 }

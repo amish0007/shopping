@@ -1,5 +1,7 @@
 package com.example.shoppingapp.model;
 
+import android.widget.RatingBar;
+
 public class ProductModel {
 
     public int modelImage;
@@ -9,6 +11,7 @@ public class ProductModel {
 
     public String modelDescription;
     public String modelColor;
+    //public float ModelRating;
 
     public ProductModel(int modelImage,String modelNames,String modelOriginal,String modelNumber,String modelDescription,String modelColor)
     {
@@ -18,6 +21,7 @@ public class ProductModel {
         this.modelPrice=modelNumber;
         this.modelDescription=modelDescription;
         this.modelColor=modelColor;
+        //this.ModelRating=ModelRating;
     }
 
 }
