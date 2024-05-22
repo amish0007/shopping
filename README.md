@@ -5,4 +5,4 @@
   <img src ="https://github.com/amish0007/shopping/assets/161626399/0a044b70-ff5a-4bce-b031-91e7f1ddef81" width="200" height = "400"/>
 </p>
 
-https://github.com/amish0007/shopping/assets/161626399/c05bc0e4-eed2-4592-9219-c6873f3cea58
+https://github.com/amish0007/shopping/assets/161626399/c05bc0e4-eed2-4592-9219-c6873f3cea58 width="200" height="400"
