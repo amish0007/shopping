@@ -3,6 +3,8 @@ package com.example.shoppingapp.activity;
 import static com.example.shoppingapp.activity.MainActivity.listCart;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,5 +32,11 @@ public class AddtoCartActivity extends AppCompatActivity {
         CartAdapter cartAdapter = new CartAdapter(listCart);
         binding.rvCart.setAdapter(cartAdapter);
 
+        binding.imgCartBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
