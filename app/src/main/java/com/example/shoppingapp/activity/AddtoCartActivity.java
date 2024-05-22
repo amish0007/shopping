@@ -38,5 +38,9 @@ public class AddtoCartActivity extends AppCompatActivity {
                 finish();
             }
         });
+        if(cartAdapter.getItemCount()==0)
+        {
+            Toast.makeText(this, "Your Shopsy Cart is empty", Toast.LENGTH_SHORT).show();
+        }
     }
 }

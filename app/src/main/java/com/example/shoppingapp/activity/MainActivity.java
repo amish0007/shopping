@@ -304,6 +304,32 @@ public class MainActivity extends AppCompatActivity {
         ProductAdapter adapter = new ProductAdapter(list,shoppingInterface);
         binding.rvProducts.setAdapter(adapter);
 
+        binding.svItem.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.imgCart.setVisibility(View.GONE);
+                binding.imgCarousal.setVisibility(View.GONE);
+            }
+        });
+        binding.svItem.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                binding.imgCart.setVisibility(View.VISIBLE);
+                binding.imgCarousal.setVisibility(View.VISIBLE);
+                return false;
+            }
+        });
+        binding.svItem.setOnSuggestionListener(new SearchView.OnSuggestionListener() {
+            @Override
+            public boolean onSuggestionSelect(int position) {
+                return false;
+            }
+
+            @Override
+            public boolean onSuggestionClick(int position) {
+                return false;
+            }
+        });
         binding.svItem.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
